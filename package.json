@@ -1,0 +1,21 @@
+{
+  "name": "clubconnect",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "dev": "node --experimental-strip-types --watch src/server.ts",
+    "start": "node --experimental-strip-types src/server.ts",
+    "test": "node --experimental-strip-types --test --test-concurrency=1 tests/*.test.ts",
+    "test:unit": "node --experimental-strip-types --test tests/unit.test.ts",
+    "test:integration": "node --experimental-strip-types --test --test-concurrency=1 tests/integration.test.ts",
+    "test:e2e": "node --experimental-strip-types --test --test-concurrency=1 tests/e2e.test.ts",
+    "typecheck": "node scripts/typecheck.mjs",
+    "lint": "node scripts/lint.mjs",
+    "build": "node scripts/build.mjs",
+    "security": "node scripts/security-check.mjs",
+    "seed": "node --experimental-strip-types scripts/seed.ts"
+  }
+}
+
